@@ -1,11 +1,20 @@
 import Banner from '../components/Banner'
+import { useState, useEffect } from 'react'
+import { fetchLogements } from '../services/logementsService'
 import Card from '../components/Card'
 import '../styles/Home.scss'
 
-const logements = require('../data/logements.json')
-console.log('Total logements:', logements.length)
-
 function Home() {
+  const [logements, setLogements] = useState([])
+
+  useEffect(() => {
+    const getLogements = async () => {
+      const data = await fetchLogements()
+      setLogements(data)
+    }
+    getLogements()
+  }, [])
+
   return (
     <main id="home">
       <Banner page="home">
