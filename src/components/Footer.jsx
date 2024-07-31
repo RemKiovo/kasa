@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom'
 import kasaLogoWhite from '../assets/logo-white.svg'
 import '../styles/Footer.scss'
 
 function Footer() {
   return (
     <footer>
-      <img src={kasaLogoWhite} alt="Kasa Logo" width={100} />
+      <Link to="/">
+        <img src={kasaLogoWhite} alt="Kasa Logo" width={100} />
+      </Link>
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   )

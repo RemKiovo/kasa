@@ -1,0 +1,45 @@
+@use 'sass:color';
+@import '_colors.scss';
+
+.collapse {
+  .collapsible {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: $primary-color;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 10;
+
+    i {
+      transition: transform 0.3s ease;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .collapse-content {
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border: 1px solid rgba($primary-color, 0.3);
+    transform: translate(0, -10px);
+
+    & > * {
+      padding: 1.7rem 1rem;
+      font-size: 17px;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+}

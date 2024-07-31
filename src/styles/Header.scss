@@ -1,11 +1,19 @@
-@import '../utils/colors.scss';
+@import '_colors.scss';
 
 header {
-  padding: 2rem 3rem;
+  margin-bottom: 2rem;
 
   nav {
     display: flex;
     justify-content: space-between;
+
+    img {
+      width: 200px;
+
+      @media (max-width: 768px) {
+        width: 125px;
+      }
+    }
 
     ul {
       display: flex;
@@ -20,6 +28,11 @@ header {
           color: #000;
           font-weight: 600;
           transition: color 0.3s, border-bottom 0.3s;
+
+          @media (max-width: 768px) {
+            font-size: 12px;
+            text-transform: uppercase;
+          }
         }
         a.active {
           border-color: $primary-color;

@@ -1,0 +1,7 @@
+#general-padding {
+  padding: 40px 100px;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
