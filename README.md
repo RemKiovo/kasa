@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Kasa - Refonte de la plateforme web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenue dans le projet de refonte de Kasa, leader de la location d’appartements entre particuliers en France. Ce projet vise à moderniser le site existant avec une nouvelle stack JavaScript, en utilisant React pour le front-end.
 
-## Available Scripts
+## Table des matières
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Structure du Projet](#structure-du-projet)
+- [Informations de Conception](#informations-de-conception)
+- [Fonctionnalités](#fonctionnalités)
+- [Sources](#sources)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Kasa vous recrute en tant que développeur front-end en freelance pour développer sa nouvelle plateforme web. Votre mission est de démarrer le projet React, développer l’ensemble de l’application et suivre les maquettes Figma fournies.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prérequis
 
-### `npm test`
+Assurez-vous d'avoir installé les éléments suivants :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (version 14 ou plus)
+- npm (version 6 ou plus), yarn ou pnpm
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clonez le dépôt et installez les dépendances nécessaires :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/votre-utilisateur/kasa-refonte.git
+cd kasa-refonte
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Utilisation
 
-### `npm run eject`
+Pour démarrer l'application en mode développement :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Cela lancera l'application à `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Structure du Projet
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Voici la structure de base du projet :
 
-## Learn More
+```bash
+kasa/
+│   .gitignore
+│   package.json
+│   pnpm-lock.yaml
+│   README.md
+│
+├───public/
+└───src/
+    │   index.jsx
+    │   index.scss
+    │
+    ├───assets/
+    │       *.svg
+    │       *.png
+    │       *.jpg
+    │
+    ├───components/
+    │       *.jsx
+    │
+    ├───data/
+    │       logements.json
+    ├───pages/
+    │       *.jsx
+    │
+    ├───services/
+    ├───styles/
+    │       *.scss
+    │
+    └───utils/
+            fichiers-utilitaires
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Informations de Conception
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Le design de l'interface est disponible sur Figma. Utilisez les ressources et les prototypes pour vous guider dans le développement des composants et des animations.
 
-### Code Splitting
+### Contraintes Techniques
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Galerie (Gallery) :
+  - Navigation circulaire des images.
+  - Boutons de navigation masqués s'il n'y a qu'une image.
+  - Hauteur fixe de la galerie.
+- Collapse :
+  - Fermé par défaut à l'initialisation.
+  - Toggle à l'ouverture/fermeture par clic utilisateur.
 
-### Analyzing the Bundle Size
+## Fonctionnalités
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Utilisation de React et React Router pour la gestion des routes.
+- Composants réactifs selon les maquettes Figma.
+- Animations CSS pour les menus déroulants si vous êtes étudiant Développeur Web.
 
-### Making a Progressive Web App
+## Sources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Maquettes Figma](https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?type=design&node-id=0-1&mode=design&t=1KgUwWWFtuAVbsJ5-0)
+[Prototypes Figma](https://www.figma.com/proto/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?type=design&node-id=3-0&t=x8RBKuR4UiE3hhBW-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A0&show-proto-sidebar=1)
+[Coding Guidelines](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P8+React+Kasa/Kasa+coding+guidelines+-+IW+-+DW.pdf)
+[Data utiliser pour ce projet](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json)
