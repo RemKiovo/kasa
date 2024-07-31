@@ -1,0 +1,30 @@
+@import '../utils/colors.scss';
+
+header {
+  padding: 2rem 3rem;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+
+      li {
+        a {
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+          color: #000;
+          font-weight: 600;
+          transition: color 0.3s, border-bottom 0.3s;
+        }
+        a.active {
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+}
