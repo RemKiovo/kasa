@@ -13,7 +13,7 @@ function Collapse({ title, children }) {
     <div className="collapse">
       <button className="collapsible" onClick={toggleCollapse}>
         {title}
-        <i className={`fas fa-chevron-down ${isOpen ? 'rotate' : ''}`}></i>
+        <i className={`fas fa-chevron-up ${isOpen ? 'rotate' : ''}`}></i>
       </button>
       <div
         className="collapse-content"

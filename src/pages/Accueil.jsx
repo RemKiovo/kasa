@@ -28,6 +28,7 @@ function Home() {
               key={logement.id}
               title={logement.title}
               cover={logement.cover}
+              id={logement.id}
             />
           )
         })}

@@ -10,6 +10,7 @@ import GeneralPadding from './components/GeneralPadding'
 
 import './index.scss'
 import Footer from './components/Footer'
+import Logement from './pages/Logement'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -29,6 +30,7 @@ root.render(
             <Route path="/" element={<Accueil />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Error />} />
+            <Route path="/logement/:logementId" element={<Logement />} />
           </Routes>
         </GeneralPadding>
         <Footer />
