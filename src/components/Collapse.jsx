@@ -3,7 +3,7 @@ import '../styles/Collapse.scss'
 
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false)
-  const contentRef = useRef(null)
+  const contentRef = useRef()
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen)
@@ -22,6 +22,7 @@ function Collapse({ title, children }) {
           maxHeight: isOpen ? `${contentRef.current.scrollHeight}px` : 0,
           overflow: 'hidden',
           transition: 'max-height 0.3s ease',
+          pointerEvents: 'none',
         }}
       >
         {children}

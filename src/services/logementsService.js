@@ -4,6 +4,6 @@ export const fetchLogements = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(logements)
-    }, 1000)
+    }, 500)
   })
 }

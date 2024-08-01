@@ -21,8 +21,7 @@ function Home() {
         <h1>Chez vous, partout et ailleurs</h1>
       </Banner>
       <div id="card-container">
-        {logements.map((logement, index) => {
-          console.log(`Rendering logement ${index + 1}:`, logement)
+        {logements.map((logement) => {
           return (
             <Card
               key={logement.id}

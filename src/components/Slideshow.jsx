@@ -24,40 +24,61 @@ function Slideshow({ pictures }) {
 
   return (
     <div id="slider">
-      <div className="img-container">
-        {pictures.map((url) => (
-          <img
-            key={url}
-            src={url}
-            alt=""
-            className="slider-img"
-            style={{
-              translate: `${-100 * imageIndex}%`,
-            }}
-          />
-        ))}
-      </div>
-      <button className="slider-btn slider-btn-left" onClick={showPreviousImg}>
-        <i className="fas fa-chevron-left"></i>
-      </button>
-      <button className="slider-btn slider-btn-right" onClick={showNextImg}>
-        <i className="fas fa-chevron-right"></i>
-      </button>
-      <div className="slider-dots-container">
-        {pictures.map((_, index) => (
+      {pictures.length === 1 ? (
+        <div className="img-container">
+          {pictures.map((url) => (
+            <img
+              key={url}
+              src={url}
+              alt=""
+              className="slider-img"
+              style={{
+                translate: `${-100 * imageIndex}%`,
+              }}
+            />
+          ))}
+        </div>
+      ) : (
+        <>
+          <div className="img-container">
+            {pictures.map((url) => (
+              <img
+                key={url}
+                src={url}
+                alt=""
+                className="slider-img"
+                style={{
+                  translate: `${-100 * imageIndex}%`,
+                }}
+              />
+            ))}
+          </div>
           <button
-            key={index}
-            onClick={() => setImageIndex(index)}
-            className="slider-dots"
+            className="slider-btn slider-btn-left"
+            onClick={showPreviousImg}
           >
-            {index === imageIndex ? (
-              <i className="fas fa-circle"></i>
-            ) : (
-              <i className="far fa-circle"></i>
-            )}
+            <i className="fas fa-chevron-left"></i>
           </button>
-        ))}
-      </div>
+          <button className="slider-btn slider-btn-right" onClick={showNextImg}>
+            <i className="fas fa-chevron-right"></i>
+          </button>
+          <div className="slider-dots-container">
+            {pictures.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setImageIndex(index)}
+                className="slider-dots"
+              >
+                {index === imageIndex ? (
+                  <i className="fas fa-circle"></i>
+                ) : (
+                  <i className="far fa-circle"></i>
+                )}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   )
 }
