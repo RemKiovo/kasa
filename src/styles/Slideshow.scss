@@ -35,7 +35,7 @@
 
     &:hover,
     &:focus-visible {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
     &-left {
@@ -52,6 +52,11 @@
 
     &:hover > * {
       scale: 1.2;
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+      font-size: 3rem;
     }
   }
 
