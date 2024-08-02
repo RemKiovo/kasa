@@ -31,11 +31,11 @@ function Logement() {
         <p>{logement.description}</p>
         <h2>{logement.host.name}</h2>
         <img src={logement.host.picture} alt={logement.host.name} />
-        <p>{logement.rating}</p>
+        <p>{logement.rating} / 5 étoiles</p>
         <h3>{logement.location}</h3>
         <ul>
-          {logement.equipments.map((equipment) => (
-            <li key={equipment}>{equipment}</li>
+          {logement.equipments.map((equipment, index) => (
+            <li key={`${equipment}+${index}`}>{equipment}</li>
           ))}
         </ul>
         <ul
@@ -43,8 +43,8 @@ function Logement() {
             paddingTop: '10px',
           }}
         >
-          {logement.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
+          {logement.tags.map((tag, index) => (
+            <li key={`${tag}+${index}`}>{tag}</li>
           ))}
         </ul>
       </div>

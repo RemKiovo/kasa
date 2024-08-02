@@ -46,14 +46,6 @@
       right: 0;
     }
 
-    & > * {
-      transition: scale 150ms;
-    }
-
-    &:hover > * {
-      scale: 1.2;
-    }
-
     @media (max-width: 768px) {
       padding: 1rem;
       font-size: 3rem;
