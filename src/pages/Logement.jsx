@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { fetchLogements } from '../services/logementsService'
+import { getLogements } from '../services/logementsService'
 import Slideshow from '../components/Slideshow'
 import '../styles/Logement.scss'
 
@@ -9,7 +9,7 @@ function Logement() {
   const [logement, setLogement] = useState(null)
 
   useEffect(() => {
-    fetchLogements()
+    getLogements()
       .then((logements) => {
         const foundLogement = logements.find(
           (logement) => logement.id === logementId
@@ -20,6 +20,10 @@ function Logement() {
         console.error('Failed to fetch logements:', error)
       })
   }, [logementId])
+
+  useEffect(() => {
+    document.title = logement ? logement.title : 'Logement introuvable'
+  }, [logement])
 
   return logement ? (
     <div>

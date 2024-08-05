@@ -29,14 +29,12 @@ Assurez-vous d'avoir installé les éléments suivants :
 Clonez le dépôt et installez les dépendances nécessaires :
 
 ```bash
-git clone https://github.com/votre-utilisateur/kasa-refonte.git
-cd kasa-refonte
 npm install
 ```
 
 ## Utilisation
 
-Pour démarrer l'application en mode développement :
+Pour démarrer l'application :
 
 ```bash
 npm start

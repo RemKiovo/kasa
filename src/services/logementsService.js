@@ -1,6 +1,6 @@
 import logements from '../data/logements.json'
 
-export const fetchLogements = async () => {
+export const getLogements = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(logements)

@@ -1,6 +1,6 @@
 import Banner from '../components/Banner'
 import { useState, useEffect } from 'react'
-import { fetchLogements } from '../services/logementsService'
+import { getLogements } from '../services/logementsService'
 import Card from '../components/Card'
 import '../styles/Home.scss'
 
@@ -8,11 +8,11 @@ function Home() {
   const [logements, setLogements] = useState([])
 
   useEffect(() => {
-    const getLogements = async () => {
-      const data = await fetchLogements()
+    const getAllLogements = async () => {
+      const data = await getLogements()
       setLogements(data)
     }
-    getLogements()
+    getAllLogements()
   }, [])
 
   return (
@@ -20,7 +20,7 @@ function Home() {
       <Banner page="home">
         <h1>Chez vous, partout et ailleurs</h1>
       </Banner>
-      <div id="card-container">
+      <section id="card-container">
         {logements.map((logement) => {
           return (
             <Card
@@ -31,7 +31,7 @@ function Home() {
             />
           )
         })}
-      </div>
+      </section>
     </main>
   )
 }
