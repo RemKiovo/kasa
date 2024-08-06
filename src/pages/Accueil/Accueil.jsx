@@ -1,8 +1,8 @@
-import Banner from '../components/Banner'
+import Banner from '../../components/Banner/Banner'
 import { useState, useEffect } from 'react'
-import { getLogements } from '../services/logementsService'
-import Card from '../components/Card'
-import '../styles/Home.scss'
+import { getLogements } from '../../services/logementsService'
+import Card from '../../components/Card/Card'
+import './Accueil.scss'
 
 function Home() {
   const [logements, setLogements] = useState([])

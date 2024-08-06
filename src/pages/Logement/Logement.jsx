@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getLogements } from '../services/logementsService'
-import Slideshow from '../components/Slideshow'
-import '../styles/Logement.scss'
+import { getLogements } from '../../services/logementsService'
+import Slideshow from '../../components/Slideshow/Slideshow'
+import './Logement.scss'
 
 function Logement() {
   const { logementId } = useParams()
