@@ -64,19 +64,24 @@ kasa/
     │       *.jpg
     │
     ├───components/
-    │       *.jsx
+    │   ├───Component/
+    │       *.tsx
+    │       *.scss
     │
     ├───data/
     │       logements.json
     ├───pages/
-    │       *.jsx
-    │
-    ├───services/
-    ├───styles/
+    │   ├───Page/
+    │       *.tsx
     │       *.scss
     │
+    ├───services/
+    │       *.js
+    ├───styles/
+    │       _colors.scss
+    │
     └───utils/
-            fichiers-utilitaires
+          fichiers-utilitaires
 ```
 
 ## Informations de Conception

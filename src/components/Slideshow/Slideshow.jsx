@@ -23,9 +23,9 @@ function Slideshow({ pictures }) {
   }
 
   return (
-    <div id="slider">
+    <div className="slider">
       {pictures.length === 1 ? (
-        <div className="img-container">
+        <figure className="img-container">
           {pictures.map((url) => (
             <img
               key={url}
@@ -37,11 +37,11 @@ function Slideshow({ pictures }) {
               }}
             />
           ))}
-        </div>
+        </figure>
       ) : (
         <>
-          <div className="img-container">
-            {pictures.map((url) => (
+          <figure className="img-container">
+            {pictures.map((url, index) => (
               <img
                 key={url}
                 src={url}
@@ -50,16 +50,22 @@ function Slideshow({ pictures }) {
                 style={{
                   translate: `${-100 * imageIndex}%`,
                 }}
+                aria-hidden={index !== imageIndex}
               />
             ))}
-          </div>
+          </figure>
           <button
             className="slider-btn slider-btn-left"
             onClick={showPreviousImg}
+            aria-label="Slide précédente"
           >
             <i className="fas fa-chevron-left"></i>
           </button>
-          <button className="slider-btn slider-btn-right" onClick={showNextImg}>
+          <button
+            className="slider-btn slider-btn-right"
+            onClick={showNextImg}
+            aria-label="Slide suivante"
+          >
             <i className="fas fa-chevron-right"></i>
           </button>
           <div className="slider-dots-container">

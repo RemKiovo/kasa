@@ -5,9 +5,9 @@ import Collapse from '../../components/Collapse/Collapse'
 
 function About() {
   return (
-    <div id="about">
+    <main id="about">
       <Banner page="about" />
-      <div id="collapse-container">
+      <article id="collapse-container">
         <Collapse title="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale.
@@ -47,8 +47,8 @@ function About() {
             pour nos hôtes.
           </p>
         </Collapse>
-      </div>
-    </div>
+      </article>
+    </main>
   )
 }
 

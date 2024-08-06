@@ -13,18 +13,16 @@ import Logement from './pages/Logement/Logement'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <Router>
-      <div className="app-container">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Accueil />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error />} />
-          <Route path="/logement/:logementId" element={<Logement />} />
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
-  </React.StrictMode>
+  <Router>
+    <div className="app-container">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
+        <Route path="/logement/:logementId" element={<Logement />} />
+      </Routes>
+    </div>
+    <Footer />
+  </Router>
 )

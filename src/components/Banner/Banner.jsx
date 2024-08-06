@@ -1,3 +1,4 @@
+import Slideshow from '../Slideshow/Slideshow'
 import './Banner.scss'
 
 const bannerImages = {
@@ -5,13 +6,20 @@ const bannerImages = {
   about: require('../../assets/banner/about.png'),
 }
 
-function Banner({ page, children }) {
+function Banner({ page, children, logement }) {
   return (
-    <div className="banner">
-      <img src={bannerImages[page]} alt={`${page} banner`} />
-      <div className="overlay"></div>
-      {children}
-    </div>
+    <>
+      {page === 'logement' && logement ? (
+        <>
+          <Slideshow pictures={logement.pictures} />
+        </>
+      ) : (
+        <div className="banner">
+          <img src={bannerImages[page]} alt={`${page} banner`} />
+          {children}
+        </div>
+      )}
+    </>
   )
 }
 

@@ -14,10 +14,19 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body,
+:root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .app-container {
   padding: 2rem;
+  flex: 1;
 }
