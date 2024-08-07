@@ -1,6 +1,6 @@
 .banner {
   width: 100%;
-  height: 25vh;
+  height: 20vh;
   position: relative;
   border-radius: 25px;
   text-align: center;
@@ -9,6 +9,7 @@
 
   @media (max-width: 768px) {
     padding: 4rem;
+    height: 15vh;
   }
 
   img {

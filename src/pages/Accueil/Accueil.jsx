@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner/Banner'
 import { useState, useEffect } from 'react'
-import { getLogements } from '../../services/logementsService'
+import { getLogements } from '../../services/getLogements'
 import Card from '../../components/Card/Card'
 import './Accueil.scss'
 import { showToast } from '../../components/Toaster/Toaster'
@@ -12,7 +12,6 @@ function Home() {
     getLogements()
       .then((logements) => {
         setLogements(logements)
-        showToast(`${logements.length} logements récupérer`, 'info', 2000)
       })
       .catch((error) => {
         console.error(error)
