@@ -2,12 +2,17 @@ import './About.scss'
 
 import Banner from '../../components/Banner/Banner'
 import Collapse from '../../components/Collapse/Collapse'
+import { useEffect } from 'react'
 
 function About() {
+  useEffect(() => {
+    document.title = 'Kasa | À propos'
+  })
+
   return (
     <main id="about">
       <Banner page="about" />
-      <article id="collapse-container">
+      <section id="collapse-container">
         <Collapse title="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale.
@@ -47,7 +52,7 @@ function About() {
             pour nos hôtes.
           </p>
         </Collapse>
-      </article>
+      </section>
     </main>
   )
 }

@@ -23,7 +23,7 @@ function Slideshow({ pictures }) {
   }
 
   return (
-    <div className="slider">
+    <section className="slider">
       {pictures.length === 1 ? (
         <figure className="img-container">
           {pictures.map((url) => (
@@ -85,7 +85,7 @@ function Slideshow({ pictures }) {
           </div>
         </>
       )}
-    </div>
+    </section>
   )
 }
 

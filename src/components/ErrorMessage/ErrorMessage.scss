@@ -1,11 +1,12 @@
 @import '../../styles/_colors.scss';
 
-#error {
+.error {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 4rem 0;
+  padding: 0;
+  margin: 0;
   gap: 3rem;
 
   h1 {

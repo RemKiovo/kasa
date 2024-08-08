@@ -63,6 +63,10 @@
     transform: translateX(-50%);
     display: flex;
     gap: 0.25rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 100em;
+    backdrop-filter: blur(2px);
   }
 
   .slider-dots {

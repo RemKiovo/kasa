@@ -1,37 +1,5 @@
 @import '../../styles/_colors.scss';
 
-@mixin responsive-font-size($desktop-size, $mobile-size) {
-  font-size: $desktop-size;
-
-  @media (max-width: 768px) {
-    font-size: $mobile-size;
-  }
-}
-
-@mixin responsive-padding($desktop-padding, $mobile-padding) {
-  padding: $desktop-padding;
-
-  @media (max-width: 768px) {
-    padding: $mobile-padding;
-  }
-}
-
-@mixin responsive-flex-direction($desktop-direction, $mobile-direction) {
-  flex-direction: $desktop-direction;
-
-  @media (max-width: 768px) {
-    flex-direction: $mobile-direction;
-  }
-}
-
-@mixin responsive-margin($desktop-margin, $mobile-margin) {
-  margin: $desktop-margin;
-
-  @media (max-width: 768px) {
-    margin: $mobile-margin;
-  }
-}
-
 .logement-info {
   padding-top: 20px;
   display: flex;
@@ -51,14 +19,22 @@
   }
 
   &__title {
-    @include responsive-font-size(36px, 24px);
+    font-size: 36px;
     font-weight: 500;
     color: $primary-color;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__location {
-    @include responsive-font-size(1.5rem, 1rem);
+    font-size: 1.5rem;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   &__host {
@@ -93,14 +69,15 @@
       }
 
       figcaption {
-        @include responsive-font-size(18px, 16px);
+        font-size: 18px;
         text-align: right;
         padding-right: 15px;
-        text-wrap: wrap;
+        white-space: wrap;
         color: $primary-color;
 
         @media (max-width: 768px) {
           padding-right: 0;
+          font-size: 16px;
         }
       }
     }
@@ -118,7 +95,7 @@
     }
 
     & > * {
-      @include responsive-padding(5px 20px, 5px 10px);
+      padding: 5px 20px;
       min-width: 115px;
       border-radius: 10px;
       background-color: $primary-color;
@@ -139,5 +116,44 @@
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+.rating {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+  &__item {
+    font-size: 25px;
+    color: #ccc;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    & > * {
+      transition: scale 0.25s;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .star-#{$i} {
+      animation: stagger-animation 0.5s ease-in-out #{$i * 0.1}s forwards;
+    }
+  }
+}
+
+@keyframes stagger-animation {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    color: $primary-color;
   }
 }

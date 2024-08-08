@@ -20,6 +20,7 @@ function Home() {
           'error'
         )
       })
+    document.title = 'Kasa | Accueil'
   }, [])
 
   return (
@@ -29,14 +30,8 @@ function Home() {
       </Banner>
       <section id="card-container">
         {logements.map((logement) => {
-          return (
-            <Card
-              key={logement.id}
-              title={logement.title}
-              cover={logement.cover}
-              id={logement.id}
-            />
-          )
+          const { id, title, cover } = logement
+          return <Card key={id} title={title} cover={cover} id={id} />
         })}
       </section>
     </main>
