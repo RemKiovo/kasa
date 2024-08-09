@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import './Collapse.scss'
 
-function Collapse({ title, children }) {
+function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false)
   const contentRef = useRef()
 
@@ -25,7 +25,7 @@ function Collapse({ title, children }) {
           pointerEvents: 'none',
         }}
       >
-        {children}
+        <p>{content}</p>
       </div>
     </article>
   )
