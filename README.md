@@ -59,26 +59,31 @@ kasa/
     │   index.scss
     │
     ├───assets/
-    │       *.svg
-    │       *.png
-    │       *.jpg
+    │   *.svg
+    │   *.png
+    │   *.jpg
     │
     ├───components/
-    │   ├───Component/
+    │   └───Component/
     │       *.tsx
     │       *.scss
     │
+    ├───constants/
+    │   index.js
+    │
     ├───data/
-    │       logements.json
+    │   logements.json
+    │
     ├───pages/
-    │   ├───Page/
+    │   └───Page/
     │       *.tsx
     │       *.scss
     │
     ├───services/
-    │       *.js
+    │   *.js
+    │
     ├───styles/
-    │       _colors.scss
+    │   _colors.scss
     │
     └───utils/
           fichiers-utilitaires
